@@ -1,5 +1,9 @@
 */*/*
+<<<<<<< HEAD
 !.gitingnore
 !**.pas
 !.git/**
 !*.md
+=======
+!**.pas
+>>>>>>> bd39b5db8b35a29c68de9771dd918b8eb14637c9
