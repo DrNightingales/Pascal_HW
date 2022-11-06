@@ -1,3 +1,5 @@
-*
-!*.pas
+*/*/*
+!.gitingnore
+!**.pas
+!.git/**
 !*.md
