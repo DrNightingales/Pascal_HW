@@ -1,5 +1,8 @@
 */*/*
-<<<<<<< HEAD
+.vscode
+GPATH
+GTAGS
+GRTAGS
 !.gitingnore
 !**.pas
 !.git/**
