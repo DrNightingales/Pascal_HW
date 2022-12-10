@@ -2,9 +2,9 @@
 Program t1156;
 
 
-Function Sum_of_divisors(K: integer):   integer;
+Function Sum_of_divisors(K: longint):   longint;
 
-Var sum, i:   integer;
+Var sum, i:   longint;
 Begin
     sum := 1;
     For i := 2 To (k-1) Do
@@ -14,8 +14,8 @@ Begin
 End;
 
 Var 
-    sums:   array[2..maxint] Of integer;
-    N, i, j:   integer;
+    sums:   array[2..maxint] Of longint;
+    N, i, j:   longint;
 Begin
     read(N);
     If N < 3 Then
