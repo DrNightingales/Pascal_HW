@@ -18,6 +18,11 @@ Var
     N, i, j:   integer;
 Begin
     read(N);
+    If N < 3 Then
+        Begin
+            write('Error');
+            exit;
+        End;
     For i := 2 To N Do
         sums[i] := Sum_of_divisors(i);
     For i := 2 To N Do

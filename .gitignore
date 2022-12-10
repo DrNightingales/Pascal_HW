@@ -8,5 +8,6 @@ GRTAGS
 !.git/**
 !*.md
 =======
+tempCodeRun*
 !**.pas
 >>>>>>> bd39b5db8b35a29c68de9771dd918b8eb14637c9
