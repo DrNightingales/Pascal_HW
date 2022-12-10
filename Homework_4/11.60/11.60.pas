@@ -3,7 +3,7 @@ Program t1160;
 
 Const 
     N =   3;
-    M =   2;
+    M =   4;
 
 Type 
     Tmatrix =   array[1..N, 1..M] Of integer;
@@ -39,10 +39,10 @@ End;
 
 Var 
     i, j, k, current_max:   integer;
-    a:   Tmatrix;
     matrices:   array[1..3] Of Tmatrix;
     max_zerorows:   array[1..3] Of integer;
 Begin
+    current_max := -1;
     For k := 1 To 3 Do
         Begin
             For i := 1 To N Do
