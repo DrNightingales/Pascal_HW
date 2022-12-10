@@ -1,13 +1,16 @@
 
 Program t1151;
 Function Intersection(a1, b1, c1, a2, b2, c2:real; Var X, Y:real):   boolean;
+
+Var D:   real;
 Begin
-    If a1*b2 - a2*b1 = 0 Then
+    D := a1*b2 - a2*b1;
+    If D = 0 Then
         Intersection := false
     Else
         Begin
-            X :=   -(b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
-            Y :=   -(a2 * c1 - a1 * c2) / (a1 * b2 - a2 * b1);
+            X :=   -(b1 * c2 - b2 * c1) / D;
+            Y :=   -(a2 * c1 - a1 * c2) / D;
             Intersection := True;
         End;
 End;
