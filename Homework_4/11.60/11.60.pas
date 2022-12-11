@@ -1,3 +1,4 @@
+{+I, +R}
 
 Program t1160;
 
@@ -6,11 +7,12 @@ Const
     M =   4;
 
 Type 
-    Tmatrix =   array[1..N, 1..M] Of integer;
+    Tmatrix =   array[1..N, 1..M] Of real;
 Function zerorows(Var A: Tmatrix):   integer;
 
 Var 
-    i, j, num:   integer;
+    i, j:   int32;
+    num:   integer;
 Begin
     j := 1;
     num := 0;
@@ -18,7 +20,7 @@ Begin
         Begin
             While (a[i, j] = 0) And (j <= M) Do
                 j := j + 1;
-            If j = M+1 Then
+            If j = (M+1) Then
                 num := num + 1;
             j := 1;
         End;
@@ -27,7 +29,7 @@ End;
 Procedure print_matrix(Var A: Tmatrix);
 
 Var 
-    i, j:   integer;
+    i, j:   int32;
 Begin
     For i := 1 To N Do
         Begin
@@ -38,9 +40,9 @@ Begin
 End;
 
 Var 
-    i, j, k, current_max:   integer;
+    i, j, k, current_max:   int32;
     matrices:   array[1..3] Of Tmatrix;
-    max_zerorows:   array[1..3] Of integer;
+    max_zerorows:   array[1..3] Of int32;
 Begin
     current_max := -1;
     For k := 1 To 3 Do
