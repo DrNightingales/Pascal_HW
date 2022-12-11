@@ -45,11 +45,12 @@ Begin
     fact := term;
     While abs(fact) > eps Do
         Begin
-            temp := fact.re;
-            fact.re := (fact.re*z_sq.re - fact.im*z_sq.im)/(n*(n+1));
-            fact.im := temp*z_sq.im + z_sq.re*fact.im;
+            fact.re := fact.re / (n*(n+1));
+            fact.im := fact.im / (n*(n+1));
+            fact := multiply(z_sq, fact);
             term := add(term, fact);
             n := n+2;
-            writeln(term.re:0:6, ' ', term.im:0:6);
         End;
+    writeln(term.re:0:6, ' ', term.im:0:6);
+
 End.
